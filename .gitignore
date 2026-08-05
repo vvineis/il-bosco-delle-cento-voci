@@ -1,0 +1,12 @@
+# Roba di Python
+__pycache__/
+*.pyc
+tools/provino-*.jpg
+README.md
+*.docx
+Thumbs.db
+.DS_Store
+
+vitto_img.jpeg
+img/
+copertina4new.png

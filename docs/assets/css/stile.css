@@ -1,0 +1,1006 @@
+/* ==========================================================================
+   Il Bosco delle Cento Voci — foglio di stile
+   Palette ricavata dalla copertina: verde bosco, crema, oro, arancio volpe.
+   ========================================================================== */
+
+:root {
+  /* colori */
+  --verde-notte:  #0c2e20;
+  --verde-scuro:  #12402c;
+  --verde:        #1c5a3d;
+  --verde-chiaro: #2f7350;
+  --foglia:       #4c8f5c;
+  --crema:        #fdf7e7;
+  --crema-scura:  #f4e8cd;
+  --pergamena:    #efe0be;
+  --oro:          #e3b552;
+  --oro-scuro:    #c2913a;
+  --volpe:        #cf6a33;
+  --volpe-chiara: #e08a52;
+  --corteccia:    #4b3421;
+  --inchiostro:   #24392d;
+  --inchiostro-tenue: #4d6354;
+
+  /* tipografia */
+  --display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --testo: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* misure */
+  --larghezza: 1080px;
+  --larghezza-lettura: 40rem;
+  --raggio: 18px;
+  --ombra: 0 12px 32px rgba(12, 46, 32, 0.18);
+  --ombra-morbida: 0 4px 16px rgba(12, 46, 32, 0.10);
+
+  /* dimensione del testo dei racconti, regolabile dal lettore */
+  --testo-racconto: 1.15rem;
+}
+
+/* --------------------------------------------------------------- base --- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--testo);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--inchiostro);
+  background: var(--crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+}
+
+a { color: var(--verde); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--volpe); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.contenitore {
+  width: min(100% - 2.5rem, var(--larghezza));
+  margin-inline: auto;
+}
+
+.solo-lettori {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* salta al contenuto */
+.salta {
+  position: absolute; left: 50%; transform: translate(-50%, -120%);
+  background: var(--crema); color: var(--verde-scuro);
+  padding: 0.6rem 1.2rem; border-radius: 0 0 12px 12px; z-index: 100;
+  transition: transform 0.15s;
+}
+.salta:focus { transform: translate(-50%, 0); }
+
+:focus-visible {
+  outline: 3px solid var(--oro);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------ intestaz. --- */
+
+.testata {
+  background: var(--verde-scuro);
+  color: var(--crema);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 12px rgba(12, 46, 32, 0.25);
+}
+
+.testata .contenitore {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 68px;
+  flex-wrap: wrap;
+  padding-block: 0.5rem;
+}
+
+.marchio {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  color: var(--crema);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+  margin-right: auto;
+}
+.marchio:hover { color: var(--oro); }
+.marchio svg { flex: none; }
+
+.menu {
+  display: flex;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.menu a {
+  color: var(--crema);
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  display: block;
+  transition: background 0.15s, color 0.15s;
+}
+.menu a:hover { background: rgba(253, 247, 231, 0.12); color: var(--crema); }
+.menu a[aria-current="page"] { background: var(--oro); color: var(--verde-notte); font-weight: 700; }
+
+/* ------------------------------------------------------------------ hero --- */
+
+.hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 0%, rgba(76, 143, 92, 0.28), transparent 70%),
+    var(--verde-scuro);
+  color: var(--crema);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3.5rem, 7vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 40px;
+  background: var(--crema);
+  clip-path: polygon(0 100%, 0 40%, 8% 65%, 16% 30%, 25% 62%, 34% 25%, 43% 58%, 52% 22%, 61% 60%, 70% 28%, 79% 63%, 88% 32%, 96% 62%, 100% 40%, 100% 100%);
+}
+
+.hero-alto {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.hero-copertina {
+  border-radius: 10px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
+  border: 3px solid rgba(227, 181, 82, 0.35);
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.9rem);
+  margin-bottom: 0.25em;
+  color: var(--crema);
+  font-weight: 400;
+  font-style: italic;   /* «Il Bosco» e «delle Cento Voci» nello stesso taglio */
+}
+.hero h1 em {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-autrice {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--oro);
+  margin: 0 0 1.5rem;
+}
+
+.hero-sommario {
+  font-size: 1.12rem;
+  color: rgba(253, 247, 231, 0.9);
+  max-width: 38rem;
+}
+
+/* la frase che chiude il banner, a pedice */
+.hero-pedice {
+  max-width: 40rem;
+  margin: clamp(2rem, 4vw, 2.8rem) auto 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(227, 181, 82, 0.35);
+  text-align: center;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.6;
+  color: rgba(253, 247, 231, 0.9);
+}
+
+.occhiello {
+  font-family: var(--testo);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--oro);
+  margin: 0 0 1rem;
+}
+
+/* ------------------------------------------------------------- congedo --- */
+/* La Filastrocca del Bosco: sezione a tutta larghezza, e pagina propria. */
+
+.congedo {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(76, 143, 92, 0.22), transparent 70%),
+    var(--verde-notte);
+  color: var(--crema);
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  text-align: center;
+}
+.congedo > .contenitore { position: relative; }
+.congedo .occhiello { margin-bottom: 1.8rem; }
+
+.congedo-pagina { padding-block: clamp(3rem, 8vw, 6rem); }
+.congedo-pagina h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--crema);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.congedo-sopra {
+  max-width: 30rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+  color: rgba(253, 247, 231, 0.72);
+  font-size: 1rem;
+}
+.congedo-azioni { margin-top: 2.5rem; }
+.congedo .fregio { color: var(--oro); margin-top: 2rem; margin-bottom: 0; }
+
+.congedo-versi {
+  max-width: 34rem;
+  margin-inline: auto;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.6vw, 1.45rem);
+  line-height: 1.8;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+.congedo-versi p { margin: 0 0 1.15em; }
+.congedo-versi p:last-child { margin-bottom: 0; }
+.congedo-versi p:first-child::first-letter {
+  font-size: 1.9em;
+  line-height: 1;
+  color: var(--oro);
+  font-style: normal;
+}
+
+/* ---------------------------------------------------------------- bottoni --- */
+
+.azioni { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
+
+.bottone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--testo);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+.bottone:hover { transform: translateY(-2px); }
+
+.bottone-oro { background: var(--oro); color: var(--verde-notte); }
+.bottone-oro:hover { background: #f0c465; color: var(--verde-notte); }
+
+.bottone-chiaro { background: transparent; color: var(--crema); border-color: rgba(253, 247, 231, 0.5); }
+.bottone-chiaro:hover { background: rgba(253, 247, 231, 0.12); color: var(--crema); }
+
+.bottone-verde { background: var(--verde); color: var(--crema); }
+.bottone-verde:hover { background: var(--verde-chiaro); color: var(--crema); }
+
+.bottone-contorno { background: transparent; color: var(--verde); border-color: var(--verde); }
+.bottone-contorno:hover { background: var(--verde); color: var(--crema); }
+
+/* --------------------------------------------------------------- sezioni --- */
+
+.sezione { padding: clamp(3rem, 6vw, 4.5rem) 0; }
+.sezione-crema { background: var(--crema); }
+.sezione-pergamena { background: var(--crema-scura); }
+.sezione-verde { background: var(--verde-scuro); color: var(--crema); }
+.sezione-verde h2 { color: var(--crema); }
+
+.titolo-sezione {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+.sottotitolo-sezione {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  color: var(--inchiostro-tenue);
+}
+.sezione-verde .sottotitolo-sezione { color: rgba(253, 247, 231, 0.78); }
+
+/* fregio a foglie */
+.fregio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 1.6rem;
+  color: var(--oro-scuro);
+}
+.fregio::before, .fregio::after {
+  content: "";
+  height: 1px;
+  width: min(28%, 120px);
+  background: currentColor;
+  opacity: 0.45;
+}
+.sezione-verde .fregio { color: var(--oro); }
+
+/* --------------------------------------------------------------- schede --- */
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+  gap: 1.4rem;
+}
+
+.scheda {
+  background: var(--crema);
+  border: 1px solid rgba(28, 90, 61, 0.16);
+  border-radius: var(--raggio);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: var(--ombra-morbida);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+a.scheda:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ombra);
+  border-color: var(--oro);
+  color: inherit;
+}
+
+.scheda-numero {
+  font-family: var(--display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--oro-scuro);
+  text-transform: uppercase;
+}
+.scheda h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--verde-scuro);
+}
+.scheda p {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--inchiostro-tenue);
+  line-height: 1.6;
+}
+.scheda-freccia {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--volpe);
+}
+
+/* ------------------------------------------------------------- abitanti --- */
+
+.griglia-abitanti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 1.2rem;
+}
+
+.abitante {
+  background: var(--crema);
+  border: 1px solid rgba(28, 90, 61, 0.14);
+  border-radius: var(--raggio);
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  box-shadow: var(--ombra-morbida);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.medaglione {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--verde);
+  box-shadow: 0 0 0 3px var(--crema), 0 0 0 5px rgba(227, 181, 82, 0.55),
+              0 6px 16px rgba(12, 46, 32, 0.22);
+  margin-bottom: 0.9rem;
+}
+
+.medaglione-grande { width: 132px; height: 132px; margin-bottom: 0; }
+
+.ritratto {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+}
+.ritratto h3 {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  color: var(--verde-scuro);
+  margin: 0;
+}
+.ritratto-occhiello {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--oro-scuro);
+}
+
+.abitante h3 { font-size: 1.15rem; margin: 0; color: var(--verde-scuro); }
+.abitante .specie {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--oro-scuro);
+}
+.abitante p { font-size: 0.92rem; margin: 0.3rem 0 0; color: var(--inchiostro-tenue); }
+.abitante .rimando { margin-top: auto; padding-top: 0.7rem; font-size: 0.88rem; }
+
+/* ----------------------------------------------------------------- mappa --- */
+
+/* La mappa occupa tutta la larghezza della finestra: sta fuori dal contenitore,
+   così non serve ricorrere a 100vw (che includerebbe la barra di scorrimento
+   e farebbe sbordare la pagina). */
+.mappa-cornice {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-block: 3px solid rgba(227, 181, 82, 0.45);
+  box-shadow: 0 10px 30px rgba(12, 46, 32, 0.16);
+  background: var(--verde-notte);
+  margin-block: 0.5rem 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mappa {
+  display: block;
+  width: 100%;
+  min-width: 1000px;  /* sotto questa soglia la mappa si trascina di lato */
+  height: auto;
+  /* su schermi molto larghi la mappa diventerebbe altissima: la si tiene
+     entro l'altezza della finestra, con le bande laterali del fondo scuro */
+  max-height: 86vh;
+  object-fit: contain;
+}
+
+.mappa .luogo { cursor: pointer; }
+.mappa .punto {
+  fill: var(--oro);
+  stroke: var(--crema);
+  stroke-width: 2.5;
+  transition: r 0.15s, fill 0.15s;
+}
+.mappa .alone {
+  fill: none;
+  stroke: rgba(253, 247, 231, 0.55);
+  stroke-width: 2;
+  transition: r 0.15s, stroke 0.15s;
+}
+.mappa .etichetta {
+  font-family: var(--display);
+  font-size: 30px;
+  font-style: italic;
+  fill: var(--crema);
+  paint-order: stroke fill;          /* alone scuro: leggibile su qualsiasi fondo */
+  stroke: rgba(10, 34, 22, 0.85);
+  stroke-width: 6px;
+  stroke-linejoin: round;
+  transition: fill 0.15s;
+}
+
+/* Dove c'è un cursore i nomi restano nascosti e compaiono al passaggio:
+   la mappa si guarda come un quadro, e si legge quando la si esplora.
+   Sui dispositivi a tocco, dove l'hover non esiste, i nomi restano visibili. */
+@media (hover: hover) and (pointer: fine) {
+  .mappa .etichetta { opacity: 0; transition: opacity 0.18s ease; }
+  .mappa .luogo:hover .etichetta,
+  .mappa .luogo:focus-visible .etichetta { opacity: 1; }
+  .mappa .alone { opacity: 0.75; }
+}
+
+.mappa .luogo:hover .punto,
+.mappa .luogo:focus-visible .punto { r: 11; fill: var(--volpe); }
+.mappa .luogo:hover .alone,
+.mappa .luogo:focus-visible .alone { r: 22; stroke: var(--oro); }
+.mappa .luogo:hover .etichetta,
+.mappa .luogo:focus-visible .etichetta { fill: var(--oro); }
+.mappa .luogo:focus-visible { outline: none; }
+.mappa .luogo:focus-visible .alone { stroke-width: 4; }
+
+.mappa-nota {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--inchiostro-tenue);
+  margin: 1rem 0 0;
+}
+
+
+.azioni-indice {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------------- spunti --- */
+
+.nota-metodo {
+  background: var(--crema-scura);
+  border-radius: var(--raggio);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 2.5rem;
+}
+.nota-metodo h3 { font-size: 1.25rem; color: var(--verde-scuro); margin-bottom: 0.5rem; }
+.nota-metodo p { margin: 0 0 0.8rem; }
+.nota-metodo p:last-child { margin-bottom: 0; }
+
+.sommario-spunti {
+  max-width: var(--larghezza-lettura);
+  margin: 0 auto 2.5rem;
+  background: var(--crema);
+  border: 1px solid rgba(28, 90, 61, 0.18);
+  border-radius: var(--raggio);
+  padding: 1rem 1.4rem;
+}
+.sommario-spunti summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--verde);
+  list-style: none;
+}
+.sommario-spunti summary::-webkit-details-marker { display: none; }
+.sommario-spunti summary::before { content: "▸ "; }
+.sommario-spunti[open] summary::before { content: "▾ "; }
+.sommario-spunti ul {
+  columns: 2 16rem;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0.4rem;
+  font-size: 0.95rem;
+}
+.sommario-spunti li { margin-bottom: 0.35rem; break-inside: avoid; }
+
+.elenco-spunti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 1.4rem;
+}
+
+.spunto {
+  background: var(--crema);
+  border: 1px solid rgba(28, 90, 61, 0.16);
+  border-left: 4px solid var(--oro);
+  border-radius: var(--raggio);
+  padding: 1.5rem;
+  box-shadow: var(--ombra-morbida);
+  scroll-margin-top: 90px;
+}
+.spunto h3 { font-size: 1.25rem; margin: 0.2rem 0 0.5rem; }
+.spunto h3 a { color: var(--verde-scuro); text-decoration: none; }
+.spunto h3 a:hover { color: var(--volpe); text-decoration: underline; }
+.spunto-tema { font-size: 0.92rem; color: var(--inchiostro-tenue); margin: 0 0 1rem; }
+
+.avvertenza {
+  background: rgba(207, 106, 51, 0.1);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--corteccia);
+  margin: 0 0 1rem;
+}
+.avvertenza::before { content: "◆ "; color: var(--volpe); }
+
+/* la stessa avvertenza, in cima alla pagina di un racconto */
+.avvertenza-lettura {
+  max-width: var(--larghezza-lettura);
+  margin: 0 auto 2.5rem;
+  padding: 1rem 1.3rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  border-left: 4px solid var(--volpe);
+  border-radius: 0 12px 12px 0;
+}
+
+.domande {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  counter-reset: domanda;
+}
+.domande li {
+  position: relative;
+  padding-left: 1.9rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.domande li::before {
+  counter-increment: domanda;
+  content: counter(domanda);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: var(--verde);
+  color: var(--crema);
+  font-family: var(--display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.attivita {
+  background: var(--crema-scura);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.93rem;
+  margin: 0;
+  color: var(--inchiostro-tenue);
+}
+.attivita span {
+  display: block;
+  font-family: var(--testo);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--oro-scuro);
+  margin-bottom: 0.3rem;
+}
+
+/* --------------------------------------------------------------- lettura --- */
+
+.pagina-lettura { background: var(--crema); }
+
+.racconto {
+  width: min(100% - 2.5rem, var(--larghezza-lettura));
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) 0 1rem;
+}
+
+.racconto-intestazione { text-align: center; margin-bottom: 2.5rem; }
+
+.racconto-numero {
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--oro-scuro);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.racconto h1 {
+  font-size: clamp(1.9rem, 5vw, 2.7rem);
+  color: var(--verde-scuro);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.racconto-testo p {
+  font-size: var(--testo-racconto);
+  line-height: 1.85;
+  margin: 0 0 1.35em;
+  hyphens: auto;
+}
+
+/* capolettera */
+.racconto-testo > p:first-of-type::first-letter {
+  font-family: var(--display);
+  font-size: 3.4em;
+  line-height: 0.8;
+  float: left;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--volpe);
+  font-weight: 600;
+}
+
+.versi {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--verde);
+  border-top: 1px solid rgba(28, 90, 61, 0.2);
+  border-bottom: 1px solid rgba(28, 90, 61, 0.2);
+  padding: 2rem 0;
+  margin: 2.5rem 0;
+}
+.versi p { margin: 0 0 1rem; }
+.versi p:last-child {
+  font-family: var(--testo);
+  font-style: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--inchiostro-tenue);
+  margin: 1.5rem 0 0;
+}
+
+/* rimando alle domande per chi legge insieme */
+.rimando-spunti {
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(28, 90, 61, 0.15);
+  text-align: center;
+  font-size: 0.95rem;
+}
+.rimando-spunti a {
+  color: var(--oro-scuro);
+  font-weight: 700;
+  text-decoration: none;
+}
+.rimando-spunti a:hover { color: var(--volpe); text-decoration: underline; }
+
+/* barra strumenti di lettura */
+.strumenti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(28, 90, 61, 0.15);
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--inchiostro-tenue);
+}
+.strumenti-gruppo { display: flex; gap: 0.35rem; }
+.strumenti button {
+  font-family: var(--testo);
+  background: var(--crema-scura);
+  border: 1px solid rgba(28, 90, 61, 0.2);
+  color: var(--verde-scuro);
+  border-radius: 999px;
+  min-width: 38px;
+  height: 34px;
+  padding: 0 0.7rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+.strumenti button:hover { background: var(--oro); }
+
+/* navigazione tra racconti */
+.nav-racconti {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(28, 90, 61, 0.15);
+  padding: 2rem 0 3.5rem;
+}
+.nav-racconti a {
+  text-decoration: none;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.nav-racconti .verso {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--oro-scuro);
+  font-weight: 700;
+}
+.nav-racconti .titolo-nav {
+  font-family: var(--display);
+  color: var(--verde-scuro);
+  font-size: 1.05rem;
+}
+.nav-racconti a:hover .titolo-nav { color: var(--volpe); }
+.nav-racconti .avanti { text-align: right; margin-left: auto; align-items: flex-end; }
+
+/* indice laterale rapido in fondo */
+.torna-indice { text-align: center; padding-bottom: 3rem; }
+
+/* --------------------------------------------------------- pagina testo --- */
+
+.testo-lungo {
+  width: min(100% - 2.5rem, var(--larghezza-lettura));
+  margin-inline: auto;
+}
+.testo-lungo p { margin: 0 0 1.2em; }
+.testo-lungo h2 {
+  font-size: 1.7rem;
+  color: var(--verde-scuro);
+  margin-top: 2.5rem;
+}
+
+/* ----------------------------------------------------------- pié di pagina --- */
+
+.pie {
+  background: var(--verde-notte);
+  color: rgba(253, 247, 231, 0.75);
+  padding: 3rem 0 2rem;
+  font-size: 0.92rem;
+}
+.pie a { color: var(--oro); }
+.pie a:hover { color: var(--volpe-chiara); }
+.pie-griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.pie h3 {
+  color: var(--crema);
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+.pie ul { list-style: none; margin: 0; padding: 0; }
+.pie li { margin-bottom: 0.35rem; }
+.pie-basso {
+  border-top: 1px solid rgba(253, 247, 231, 0.15);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(253, 247, 231, 0.55);
+}
+
+/* ------------------------------------------------------------ download --- */
+
+.griglia-formati {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.4rem;
+}
+.formato {
+  background: var(--crema);
+  border: 1px solid rgba(28, 90, 61, 0.16);
+  border-radius: var(--raggio);
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--ombra-morbida);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.formato .sigla {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--crema);
+  background: var(--verde);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.formato h3 { margin: 0; font-size: 1.2rem; color: var(--verde-scuro); }
+.formato p { font-size: 0.93rem; color: var(--inchiostro-tenue); margin: 0.2rem 0 0; }
+.formato .bottone { margin-top: 1.2rem; }
+.formato.in-arrivo { opacity: 0.72; }
+.formato.in-arrivo .sigla { background: var(--inchiostro-tenue); }
+.etichetta-arrivo {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--oro-scuro);
+}
+
+/* --------------------------------------------------------------- mobile --- */
+
+@media (max-width: 800px) {
+  .hero-alto { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .hero-copertina { max-width: 260px; }
+  .hero-sommario { margin-inline: auto; }
+  .azioni { justify-content: center; }
+  .ritratto { justify-content: center; text-align: center; }
+  .testata .contenitore { min-height: 0; }
+  .marchio { margin-right: 0; width: 100%; justify-content: center; }
+  .menu { width: 100%; justify-content: center; }
+  /* su schermo stretto il menu occupa due righe: meglio non tenerlo fisso,
+     ruberebbe troppo spazio alla lettura */
+  .testata { position: static; }
+  .spunto { scroll-margin-top: 1rem; }
+}
+
+@media (max-width: 500px) {
+  .marchio span { font-size: 1rem; }
+  .menu a { padding: 0.35rem 0.6rem; font-size: 0.88rem; }
+  .racconto-testo > p:first-of-type::first-letter { font-size: 2.8em; }
+}
+
+/* --------------------------------------------------------------- stampa --- */
+
+@media print {
+  .testata, .pie, .strumenti, .nav-racconti, .salta, .rimando-spunti, .torna-indice { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .racconto, .testo-lungo { width: 100%; }
+  .racconto-testo p { font-size: 11pt; line-height: 1.5; }
+  h1, h2 { color: #000; break-after: avoid; }
+  .racconto-testo > p:first-of-type::first-letter { color: #000; }
+  .sezione-libro { break-before: page; }
+  /* la filastrocca del congedo va stampata come testo, non come sezione scura */
+  .congedo { background: #fff; color: #000; padding: 1rem 0; break-before: page; }
+  .congedo .fregio, .congedo-azioni { display: none; }
+  .congedo-versi { font-size: 12pt; text-shadow: none; }
+  .congedo .occhiello { color: #000; }
+}
+
+/* --------------------------------------------------------------- licenza --- */
+
+.licenza-riga {
+  background: var(--crema-scura);
+  border-left: 4px solid var(--oro);
+  border-radius: 0 12px 12px 0;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 2rem;
+}
+.testo-lungo h3 {
+  font-size: 1.2rem;
+  color: var(--verde-scuro);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.licenza-elenco {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.licenza-elenco li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.licenza-elenco li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--oro);
+}

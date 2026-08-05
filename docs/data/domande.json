@@ -1,0 +1,196 @@
+{
+  "_nota": "SI MODIFICA A MANO. Spunti di lettura, uno per racconto e uno per la Filastrocca. Le chiavi corrispondono agli slug in racconti.json, che invece è generato. Dopo ogni modifica: python tools/tutto.py",
+  "premessa": {
+    "domande": [
+      "Il Bosco cambia a seconda di chi lo attraversa. Se ci entrassi tu adesso, come te lo immagini?",
+      "Qui non ci sono eroi invincibili né magie che cancellano la tristezza. Perché, secondo te, l’autrice ha scelto così?",
+      "Che cos’è una voce? Si può avere una voce anche senza parlare?"
+    ],
+    "attivita": "Ognuno pensa e racconta agli altri quale animale sente di avere dentro. Non deve essere il più forte, il più veloce o il più carino. Basta un animale, anche piccolo, che gli assomigli un po’."
+  },
+  "i-piccoli-riti-del-bosco": {
+    "domande": [
+      "Rubino, Lola e Gedeone hanno gesti che devono ripetere sempre allo stesso modo. Tu hai qualcosa che fai sempre uguale?",
+      "All’inizio gli altri animali ridono. Che cosa cambia dopo l’arrivo di Tilda?",
+      "Alla fine si dice che i gesti che sembravano catene possono diventare ponti. Che cosa vuol dire?"
+    ],
+    "attivita": "A turno ognuno racconta un suo piccolo rito, e gli altri lo fanno insieme a lui una volta sola, senza commentare."
+  },
+  "la-volpe-che-cuciva-le-nuvole": {
+    "domande": [
+      "Perché gli altri animali ridono di Velia?",
+      "Velia continua lo stesso, anche se le parole le pungono. Che cosa la aiuta a non smettere?",
+      "C’è qualcosa che ti piace fare anche se agli altri sembra strano o inutile?"
+    ],
+    "attivita": "Guardate le nuvole dalla finestra (o disegnatele) e ognuno dice che cosa ci vede. Nessuna risposta è sbagliata, è il punto della storia."
+  },
+  "l-albero-dei-campanellini": {
+    "domande": [
+      "Perché tutti corrono verso l’albero, anche se sotto non c’è mai niente?",
+      "Mentre ascoltano i campanellini, che cosa smettono di sentire gli animali?",
+      "Ti è mai capitato di non riuscire a smettere di guardare o ascoltare qualcosa?"
+    ],
+    "attivita": "Un minuto di silenzio completo. Alla fine ognuno dice quanti suoni diversi ha riconosciuto."
+  },
+  "la-civetta-che-non-voleva-perdersi-nulla": {
+    "domande": [
+      "Di che cosa ha davvero paura Celestina?",
+      "Brumildo ha perso tutto l’inverno, ma dice di aver custodito sogni lunghissimi. Secondo te ci ha rimesso o guadagnato?",
+      "Tu che cosa non vorresti perderti per niente al mondo?"
+    ],
+    "attivita": "Ognuno racconta un sogno che ricorda, poi prova a disegnarlo. Si scopre che si può raccontare anche ciò che nessuno ha visto."
+  },
+  "il-corvo-che-ingigantiva-le-sue-gesta": {
+    "domande": [
+      "Perché Curzio inventa storie sempre più grandi?",
+      "Alla fine gli animali ridono di nuovo, ma in un modo diverso. Qual è la differenza?",
+      "Ti è mai capitato di aggiungere qualcosa a una storia per farla sembrare più bella?"
+    ],
+    "attivita": "Ognuno racconta una cosa piccolissima e vera successa oggi, anche se svela una piccola debolezza o un’imperfezione."
+  },
+  "il-tasso-che-collezionava-ombre": {
+    "domande": [
+      "Perché Tenebrio non riesce a smettere di raccogliere ombre?",
+      "Succede anche a te di collezionare tanti oggetti o di sentirti pieno di pensieri?",
+      "Lucia dice che alcune ombre servono solo a ricordare che la luce esiste. Che cosa intende?"
+    ],
+    "attivita": "Se dovessi partire domani e potessi portare con te soltanto tre oggetti, quali sceglieresti? E perché?"
+  },
+  "i-cunicoli-di-tamarinda": {
+    "domande": [
+      "All’inizio i cunicoli sono una festa. In quale momento diventano un problema?",
+      "Che cosa si perdono gli animali, mentre stanno sempre sottoterra? Che cosa sono i cunicoli oggi?",
+      "Tamarinda scava delle finestre verso il cielo. Quali sono le tue finestre, le cose che ti fanno prendere aria?"
+    ],
+    "attivita": "Si esce all’aria aperta, o ci si mette alla finestra, e ognuno raccoglie tre cose con i sensi: un suono, un odore, un oggetto. Poi si raccontano."
+  },
+  "lo-stagno-degli-specchi": {
+    "domande": [
+      "Romualdo si sente brutto e Prospero è il più ammirato del Bosco. Perché davanti allo Stagno stanno male allo stesso modo?",
+      "Che cosa li fa smettere, di colpo, di sentirsi sbagliati?",
+      "Lo specchio mostra solo dei frammenti. Che cosa di te uno specchio non potrà mai vedere?"
+    ],
+    "attivita": "A coppie, ognuno dice all’altro una cosa bella che uno specchio non riuscirebbe a mostrare."
+  },
+  "la-sorgente-disuguale": {
+    "domande": [
+      "L’acqua nasce da una sorgente sola. Perché allora non arriva a tutti?",
+      "Prima Carisio porta gli animali sulla schiena, poi cambia strada. Perché la seconda soluzione funziona meglio?",
+      "Conosci qualcosa che dovrebbe essere di tutti, ma che non arriva a tutti allo stesso modo?"
+    ],
+    "attivita": "Ognuno porta da casa un giocattolo o un libro che non usa più, e si sceglie insieme dove portarli: una scuola, una biblioteca, un’associazione del quartiere."
+  },
+  "il-carillon-del-tempo": {
+    "domande": [
+      "Perché Petronio dice di sentirsi come un chiodo nel muro?",
+      "Savino con le parole non ci sa fare, eppure riesce a dire a Petronio che lo vede. In che modo?",
+      "C’è qualcuno, intorno a te, che fa una cosa importante che di solito nessuno nota?"
+    ],
+    "attivita": "Ognuno scrive un biglietto di ringraziamento a una persona il cui lavoro, di solito, non si vede."
+  },
+  "la-cicala-che-collezionava-echi": {
+    "domande": [
+      "Perché Clizia smette di cantare per rincorrere l’eco del proprio canto?",
+      "Tenebrio dice che la sua è una collezione di specchi. Che cosa vuol dire?",
+      "Quando fai una cosa che ti piace, ti basta averla fatta, o hai bisogno che qualcuno lo sappia?"
+    ],
+    "attivita": "Fate una cosa bella senza raccontarla a nessuno per un giorno intero. Il giorno dopo, raccontate com’è stato tenerla per sé."
+  },
+  "la-libellula-che-non-trovava-il-suo-perche": {
+    "domande": [
+      "Perché Livia non riesce a trovare il suo ruolo nel Bosco? E perché questo la fa sentire a disagio?",
+      "Velia le dice: «Tu non hai i colori, tu li crei». Cosa vuole dire?",
+      "Ti è mai capitato di sentirti come Livia?"
+    ],
+    "attivita": "Ognuno scrive su un foglietto una cosa che accade grazie a un compagno o a una compagna. Poi si leggono assieme i foglietti."
+  },
+  "il-prato-in-finito": {
+    "domande": [
+      "Perché il Prato Infinito finisce?",
+      "Le accuse non fanno ricrescere neanche un filo d’erba. Che cosa lo fa ricrescere?",
+      "La luna dice che l’infinito esiste solo se lo si divide. Cosa intende? Sei d’accordo?"
+    ],
+    "attivita": "Scegliete una cosa che è di tutti (il giardino, l’aula, i libri della classe) e scrivete insieme tre regole per trattarla con rispetto pensando agli altri e chi verrà dopo."
+  },
+  "la-biblioteca-delle-foglie": {
+    "domande": [
+      "Come si fa a leggere una storia dentro una foglia?",
+      "Perché all’inizio gli animali vogliono che le foglie nuove somiglino a quelle di una volta?",
+      "Tilda dice: «il fatto che non le capiamo non vuol dire che non siano vere». Cosa vuole dire?"
+    ],
+    "attivita": "Raccogliete cinque foglie diverse e provate a raccontare, guardandole, che stagione hanno attraversato."
+  },
+  "il-pipistrello-che-leggeva-il-buio": {
+    "domande": [
+      "Perché di giorno Pìndaro si sente un errore?",
+      "Come fa a ritrovare le foglie di Rubino, se al buio non le vede?",
+      "Di giorno Pìndaro inciampa, di notte è l’unico che sa dove andare. Che cosa è cambiato: lui o il posto?"
+    ],
+    "attivita": "A occhi chiusi, riconoscete tre oggetti solo toccandoli o ascoltandone il suono."
+  },
+  "la-nascita-dello-stagno": {
+    "domande": [
+      "Per molto tempo non sembra succedere niente. Perché Callisto continua lo stesso?",
+      "Qual è, secondo te, il momento esatto in cui qualcosa comincia davvero a cambiare?",
+      "C’è qualcosa che stai imparando piano piano, senza vederne ancora i risultati?"
+    ],
+    "attivita": "Piantate un seme in un vaso e segnate su un foglio anche tutti i giorni in cui «non succede niente»."
+  },
+  "la-formica-infaticabile": {
+    "domande": [
+      "Perché Fiammetta si comporta così, secondo te?",
+      "Nel formicaio nessuno voleva farle del male, eppure Fiammetta si è spenta. Com’è potuto succedere?",
+      "Come si fa ad accorgersi che qualcuno è stanco, se continua a dire che ce la fa?"
+    ],
+    "attivita": "Ti è mai capitato che un compito o un’attività diventasse più facile e leggera grazie all’aiuto di una persona amica? O che fossi tu ad aiutare qualcuno? Pensaci e raccontalo alla classe: come ti sei sentito?"
+  },
+  "il-vento-smemorato": {
+    "domande": [
+      "In che modo gli animali aiutano il vento a ricordare chi è?",
+      "Perché alla fine il vento non si vergogna di essersi smarrito?",
+      "Chi ti aiuta a ricordare chi sei, quando te ne dimentichi?"
+    ],
+    "attivita": "Un bambino fa il vento: si mette in mezzo, chiude gli occhi e dice «non mi ricordo più chi sono». Gli altri, uno alla volta, gli ricordano ad alta voce un pezzo di lui (una cosa che gli riesce bene, un gesto, qualcosa che gli hanno visto fare davvero, una caratteristica). Poi si cambia, e ci passano tutti."
+  },
+  "il-serpente-che-ascoltava-i-colori": {
+    "domande": [
+      "Se Sinestesio ascoltasse la tua voce, di che colore la vedrebbe?",
+      "Perché Tamarinda, che ha gli occhi chiusi, alla fine dice «forse vedo»?",
+      "Nessun senso vive da solo: prova a descrivere un sapore usando soltanto i colori."
+    ],
+    "attivita": "Ascoltate un brano di musica e disegnate quello che sentite usando colori, forme e materiali diversi."
+  },
+  "un-insolita-amicizia": {
+    "domande": [
+      "Brumildo sta fermo, Raminga non riesce a fermarsi mai. Che cosa hanno in comune?",
+      "Il miele non torna dolce subito. Perché, secondo te, la storia non lo fa guarire tutto in una volta?",
+      "«Basta non assaggiarlo da solo». Chi ti fa compagnia quando ti senti giù?"
+    ],
+    "attivita": "Ognuno scrive su un bigliettino una cosa piccola che lo aiuta quando è giù: non un consiglio, una cosa vera e sua. Si piegano, si mettono in un barattolo che resta in classe. Quando qualcuno si sente triste, ne pesca uno."
+  },
+  "il-fiore-di-tilda": {
+    "avvertenza": "Questo racconto parla della morte di un personaggio molto amato. Vale la pena leggerlo con calma e lasciare spazio a quello che nasce, anche al silenzio.",
+    "domande": [
+      "Ogni animale dice una cosa che ha imparato da Tilda. Tu che cosa diresti?",
+      "Il carapace diventa legno chiaro e Tenebrio dice: «si è fatto casa». Che cosa vuol dire?",
+      "Alla fine nasce un fiore che nessuno ha visto spuntare, ma che tutti riconoscono. Perché, secondo te?"
+    ],
+    "attivita": "Ognuno pensa a una persona che non c’è più, o che è lontana, e dice una cosa che ha imparato da lei. Si può anche solo pensarla, senza dirla."
+  },
+  "l-ultima-voce-del-bosco": {
+    "domande": [
+      "Perché all’inizio il Bosco tace?",
+      "La centesima voce non appartiene a nessuno in particolare. Allora di chi è?",
+      "Il canto finale è storto, spezzato, fragile, eppure la storia dice che è perfetto. Com’è possibile?"
+    ],
+    "attivita": "Ognuno sceglie un oggetto che produce un suono o un verso. A turno, ciascuno lo fa risuonare, poi tutti insieme creano un unico grande suono."
+  },
+  "filastrocca-del-bosco": {
+    "domande": [
+      "La filastrocca ripete che nessuna voce è sola. Dopo aver letto tutto il libro, ti sembra vero?",
+      "«Una foglia si confida al vento, un sasso racconta un momento». Se una cosa del tuo mondo potesse parlare, quale sceglieresti?",
+      "L’ultimo verso dice che si torna a casa «un po’ meno solo, un poco più intero». Che cosa ti porti via dal Bosco?"
+    ],
+    "attivita": "Ognuno scrive la sua Filastrocca del Bosco. Bastano pochi versi e una regola sola: i versi vanno a rima a due a due. Per partire si può prendere in prestito l’inizio di Vittoria («Nel Bosco che hai appena visitato…») e poi voltare da un’altra parte. Alla fine si leggono tutte ad alta voce. Se si vuole, si possono spedire all’autrice, che le pubblica qui."
+  }
+}
