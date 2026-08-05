@@ -105,8 +105,7 @@ TEMI = {
     "la-cicala-che-collezionava-echi":
         "Cantare per sapere di essere ascoltati. Sul bisogno di conferme e sulla gioia liberatoria del liberarsene.",
     "la-libellula-che-non-trovava-il-suo-perche":
-        "Non trovare la propria etichetta. Sul definirsi oltre i ruoli predefiniti e sulla scoperta"
-        "che il nostro talento si compie quando siamo davvero noi stessi.",
+        "Non trovare la propria etichetta. Sul definirsi oltre i ruoli predefiniti e sulla scoperta che il nostro talento si compie quando siamo davvero noi stessi.",
     "il-prato-in-finito":
         "Una risorsa che sembra infinita...finché non finisce. Sui beni comuni e sulla cura di ciò che "
         "è di tutti.",
