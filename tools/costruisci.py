@@ -271,7 +271,7 @@ def dati_strutturati():
         "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
         "isAccessibleForFree": True,
         "description": (
-            "Ventidue favole di Vittoria Vineis: un bosco in cui ogni animale cerca "
+            "Ventidue favole e un Bosco in cui ogni animale cerca "
             "la propria voce. Si legge online gratuitamente."),
     }
     return ('<script type="application/ld+json">'
@@ -1164,7 +1164,7 @@ def main():
 
     scrivi("index.html", pagina(
         TITOLO_SITO,
-        "Ventidue favole di Vittoria Vineis: un bosco dove ogni animale cerca la propria voce. "
+        "Ventidue favole e un Bosco dove ogni animale cerca la propria voce. "
         "Si legge online gratuitamente o si scarica.",
         home(d), "home", percorso="index.html", strutturati=True))
 
