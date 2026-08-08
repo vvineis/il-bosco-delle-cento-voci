@@ -1,7 +1,7 @@
 User-agent: *
-Allow: /
+Allow: /sitemap.xml
 # PDF ed EPUB ripetono il testo delle pagine: si scaricano dal sito,
 # ma non devono comparire nei risultati al posto dei racconti
 Disallow: /download/
 
-Sitemap: https://vvineis.github.io/il-bosco-delle-cento-voci/sitemap.xml?v=2
+Sitemap: https://vvineis.github.io/il-bosco-delle-cento-voci/sitemap.xml
